@@ -23,7 +23,7 @@ brief), (3) crypto vs equity annualisation was applied correctly.
 
 ### What I changed and why
 Ran the backtest for all three methods myself in the PyCharm console and checked
-the resulting weights by hand — confirmed min-variance concentrated in
+the resulting weights by hand. I confirmed min-variance concentrated in
 low-volatility large-caps (not equal-weight), and max-Sharpe/risk-parity produced
 visibly different, sensible risk/return profiles (Sharpe 0.51 / 0.83 / 1.18).
 This confirmed the optimiser wasn't stalling.
@@ -50,10 +50,9 @@ the lag genuinely prevented look-ahead — including the two-step case of a
 weekend headline (mapped to Monday, then lagged again to Tuesday).
 
 ### What I changed and why
-Traced a real weekend headline through the pipeline myself in the console
-(a Saturday 2020-01-04 DIS headline → mapped to Monday 2020-01-06 → confirmed
-usable only from Tuesday 2020-01-07). This caught that my draft report text had
-this wrong (I'd written "usable Monday," not Tuesday) before it went in the report.
+I picked a real weekend headline and traced it through the code to check when it becomes usable. 
+I found it only becomes usable on tuesday, this mattered because in my initial draft for the report i 
+wrote monday instead of tuesday. So i had to change it.
 
 ---
 
@@ -74,8 +73,8 @@ verify the actual percentage effect of different strength values rather than
 trusting a stated example.
 
 ### What I changed and why
-Worked through the arithmetic myself: at strength 0.5 and sentiment 0.2, the
-scale factor is 1 + (0.5 × 0.2) = 1.1, a 10% boost — not the 40% I'd
+Worked through the arithmetic myself. With strength 0.5 and sentiment 0.2, the
+scale factor is 1 + (0.5 × 0.2) = 1.1, a 10% boost, not the 40%. I had 
 initially misstated in an early report draft. Caught and corrected this before
 finalising Section 4.
 
@@ -89,9 +88,11 @@ checked against real output, not estimated.
 
 ### What I changed and why
 Multiple report claims were checked and corrected against actual code output
-rather than accepted as written, including: the diversification-benefit paragraph
-(an early draft claimed combined funds beat equity-only in two of three methods;
-checking the real numbers showed this was wrong — only max-Sharpe showed a clear
-benefit), the weights-over-time "Other" percentage at different dates (an early
-draft had the direction backwards for one period), and the exact drawdown
-date/value (verified as -26.28% on 2022-09-30, not just "around September 2022").
+this includes: the diversification-benefit paragraph
+which is an early draft claimed combined funds beat equity-only in two of 
+three methods also checking the real numbers showed this was wrong, only max-Sharpe 
+showed a clear benefit. 
+Also, the weights-over-time "Other" percentage at different dates was also checked. In 
+my earlier draft, it had the direction backwards where describing 'other' as shrinking
+when it was actually growing. lastly, the exact date and value were check too
+confirming -26.28% on 2022-09-30.
