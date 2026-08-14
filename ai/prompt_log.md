@@ -51,7 +51,7 @@ weekend headline (mapped to Monday, then lagged again to Tuesday).
 
 ### What I changed and why
 I picked a real weekend headline and traced it through the code to check when it becomes usable. 
-I found it only becomes usable on tuesday, this mattered because in my initial draft for the report i 
+I found it only becomes usable on tuesday, this mattered because in my initial draft for the report it
 wrote monday instead of tuesday. So i had to change it.
 
 ---
